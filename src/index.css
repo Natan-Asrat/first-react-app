@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +12,88 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root{
+  --bg: #242526;
+  --bg-accent: #484a4d;
+  --text-color: #dadce1;
+  --nav-size: 60px;
+  --border-radius: 8px;
+  --speed: 500ms;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: var(--text-color);
+  text-decoration: none;
+}
+.navbar{
+  height: var(--nav-size);
+  background-color: var(--bg);
+  padding: 0 1rem;
+  border-bottom: var(--border);
+}
+.navbar-nav{
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-item{
+  width: calc(var(--nav-size)*0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-button{
+  --button-size: calc(var(--nav-size)*0.5);
+  width: var(--button-size);
+  height: var(--button-size);
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #484a4d;
+  transition: filter 300ms;
+}
+.icon-button:hover{
+  filter: brightness(1.2);
+}
+.dropdown{
+  position: absolute;
+  top: 58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  display: flex;
+
+  overflow: hidden;
+}
+.dropdown div{
+  min-width: calc(100% + 1rem);
+}
+.menu-item{
+  position: relative;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: background var(--speed);
+  padding: 0.5rem;
+}
+.slide{
+  transition: transform 200ms ease-in;
+  transform: translateX(calc(-300px - 1rem));
+  
+}
+.first-div, .second-div{
+  transition: all 300ms;
+}
+

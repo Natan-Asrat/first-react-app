@@ -1,3 +1,10 @@
+ul, li{
+  cursor: pointer;
+}
+div > span{
+  text-align: center;
+  font-size: 10rem;
+}
 .App {
   text-align: center;
 }
